@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>oop-js Calc</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/app.css">
+
+  </head>
+  <body>
+    <header>
+      <h2>Pożyczka gotówkowa</h2>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+            <div class="calculator">
+              
+              <div class="count">
+                <h4>Pożyczam</h4>
+                <p  id="how-much" 
+                    class="how-much how-much-js" 
+                    data-min="2000" 
+                    data-max="150000" 
+                    data-value="12000"></p>
+                <input id="calc-credit" class="value-field calc-credit-js" type="text" />
+                <span class="currency">PLN</span>
+                <hr>
+
+                <h4>Na okres</h4>
+                <p  id="how-long"
+                    class="how-long how-long-js" 
+                    data-min="6" 
+                    data-max="96" 
+                    data-value="16"></p>
+                <input id="calc-month" class="value-field calc-month-js" type="text" />
+                <span class="currency">M-CY</span>
+                <hr>
+
+                <input type="checkbox" id="insurance" />
+                <label for="insurance">Ubezpieczenie spłaty</label>
+              </div>
+              <div class="result">
+                <h4>Twoja rata</h4>
+                <p id="calc-value" class="value calc-value-js">340 PLN</p>
+                <p><a href="#" class="link">Łączna kwota pożyczki</a></p>
+                <p><a href="#" class="link-button secondary">Złóż wniosek</a></p>
+                <p><a href="#" class="link">Informacje prawne</a></p>
+              </div>
+              <div class="more">
+                Czekasz na decyzję
+                <p class="strong">tylko 15 minut!</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
