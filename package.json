@@ -2,17 +2,23 @@
   "name": "calc",
   "version": "1.0.0",
   "description": "",
-  "main": "calc.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilierette/calc.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/Ilierette/calc/issues"
+  },
+  "homepage": "https://github.com/Ilierette/calc#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
-    "bootstrap": "^4.1.3"
   }
 }
