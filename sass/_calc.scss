@@ -1,18 +1,14 @@
 .calculator {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
-    padding: 15px 20px;
-    background-color: $light-grey;
+    background-color: var(--light-grey);
     border-radius: $border-radius;
-    border: 1px solid $medium-grey;
-    border-bottom: 2px solid $dark-grey;
+    border: 1px solid var(--medium-grey);
+    border-bottom: 2px solid var(--dark-grey);
     flex-wrap: wrap;
-    margin-top: 0px;
 
     .count {
         min-width: 60%;
-        padding-right: 20px;
         @include media-breakpoint-down(sm) {
             width: 100%;
         }
@@ -20,31 +16,22 @@
         .value-field {
             display: inline-block;
             vertical-align: top;
-            margin-top: $spacer;
             width: 100px;
-            padding: 15px;
             height: 50px;
             text-align: right;
             font-weight: 600;
-            margin-left: 40px;
-            border: 1px solid $medium-grey;
-            box-shadow: inset 1px 1px $dark-grey;
+            border: 1px solid var(--medium-grey);
+            box-shadow: inset 1px 1px var(--dark-grey);
             border-radius: $border-radius-sm;
-
-            @include media-breakpoint-down(sm) {
-                float: right;
-                @include clearfix;
-            }
         }
         .currency {
-            margin: 20px 0;
             display: inline-block;
             vertical-align: top;
+            margin: 14px 0;
         }
 
         .slider-text{
-            color: $add-text;
-            font-size: $font-size-md;
+            color: var(--add-text);
             width: calc(100% - 200px);
             position: relative;
             height: 20px;
@@ -61,23 +48,22 @@
 
     .result {
         width: 35%;
-        background-color: $layout-bg;
-        border-radius: $border-radius-sm;
-        border: 1px solid $medium-grey;
-        border-bottom: 2px solid $dark-grey;
         margin: -25px 0;
-        padding: 40px 20px;
-        text-align: center;
+        background-color: var(--white);
+        border-radius: $border-radius-sm;
+        border: 1px solid var(--medium-grey);
+        border-bottom: 2px solid var(--dark-grey);
+
         @include media-breakpoint-down(sm) {
             margin: 15px -30px -40px;
             width: calc(100% + 60px);
         }
 
         .value {
-            font-size: $font-size-xxl;
             font-weight: 600;
-            color: $brand-primary;
             font-family: 'Open Sans Condensed', sans-serif;
+            color: var(--primary);
+            font-size: 54px;
         }
     }
 
@@ -85,17 +71,15 @@
         min-width: 20%;
         text-align: center;
         align-self: center;
-        padding-left: 20px;
         width: 100%;
-        margin-top: 40px;
+
         @include media-breakpoint-down(sm) {
             margin-top: 70px;
         }
 
         .strong {
-            font-size: $font-size-h2;
             font-weight: 600;
-            color: $text-color;
+            font-size: $h1-font-size;
             font-family: 'Open Sans Condensed', sans-serif;
         }
     }
@@ -103,28 +87,27 @@
     hr {
         margin: 15px 0;
         border: 0;
-        border-top: 1px solid $medium-grey;
+        border-top: 1px solid var(--medium-grey);
     }
 
-    h4 {
+    h2 {
         font-weight: 600;
     }
 
     .ui-widget-content {
-        background: $layout-bg;
-        color: $text-color;
+        background: var(--layout-bg);
+        color: var(--text-color);
     }
 
     .ui-slider {
         position: relative;
         text-align: left;
-        @include clearfix;
     }
 
     .ui-corner-all {
         height: .4em;
         border-radius: 0;
-        background-color: $dark-grey;
+        background-color: var(--dark-grey);
         margin: 20px 0;
         width: calc(100% - 200px);
         display: inline-block;
@@ -134,11 +117,11 @@
     }
 
     .ui-slider-handle {
-        border: 4px solid $brand-primary;
-        border-radius: $border-radius-rounded;
+        border: 4px solid var(--primary);
+        border-radius: $radius-rounded;
         width: 25px;
         height: 25px;
-        top: -0.8em;
+        top: -0.6em;
         margin: 0;
         outline: 0 none;
         position: relative;
@@ -151,11 +134,8 @@
     .link-button {
         display: inline-block;
         white-space: nowrap;
-        padding: 15px 30px;
-        margin: 15px 0;
-        background-color: $brand-primary;
+        background-color: var(--primary);
         font-weight: 700;
-        color: $text-white;
         text-transform: uppercase;
     }
 }
@@ -179,8 +159,8 @@ input[type='checkbox'] {
             top: -2px;
             left: 0;
             display: block;
-            background-color: $layout-bg;
-            border: 1px solid $brand-primary;
+            background-color: var(--white);
+            border: 1px solid var(--primary);
             border-radius: 2px;
             width: 25px;
             height: 25px;
@@ -193,12 +173,11 @@ input[type='checkbox'] {
             display: block;
             width: 9px;
             height: 15px;
-            border: solid $brand-primary;
+            border: solid var(--primary);
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
             z-index: 1;
             opacity: 0;
-            transition: $transition-default;
         }
     }
 

@@ -1,10 +1,9 @@
-@charset 'utf-8';
 @import "custom";
-@import "bootstrap_4/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "calc";
 
 body {
-	background: url("#{$img-url}/background.jpg") no-repeat;
+	background: url("../img/background.jpg") no-repeat;
 }
 
 @include media-breakpoint-up(md) {
@@ -13,15 +12,19 @@ body {
 	}
 }
 
-header {
-	color: $text-white;
-	background-color: $second-bg;
-	padding: 20px 15px;
-	border-bottom: 3px solid $brand-primary;
-	text-align: center;
+.main-header {
+	border-bottom: 3px solid var(--primary);
 	text-transform: uppercase;
-	h2{
+	background-color: var(--second-bg);
+	h1{
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 600;
 	}
+}
+
+a {
+  color: var(--text-color);
+  &:hover{
+  	color: var(--primary);
+  }
 }
